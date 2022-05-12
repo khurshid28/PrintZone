@@ -1,108 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Print Zone</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
-          <form action="#" class="sign-in-form">
-            <h2 class="title">Buyurtma qiling</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" value="Login" class="btn solid" />
-            <p class="social-text">Or Sign in with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </form>
-          <form action="#" class="sign-up-form">
-            <h2 class="title">Men bilan Bog'laning</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" class="btn" value="Sign up" />
-            <p class="social-text">Or Sign up with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </form>
-        </div>
-      </div>
 
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-            <h3>New here ?</h3>
-            <p>
-               Don't have an account yet ? Sign up and get access to all our services.
-            </p>
-            <button class="btn transparent" id="sign-up-btn">
-               Men bilan Bog'laning
-            </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Print Zone</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="#" class="sign-in-form">
+          <h2 class="title">Buyurtma qiling</h2>
+
+
+
+          <div class="input-field">
+            <i class="far fa-clone"></i>
+            <input type="number" placeholder="Kitob betini kiriting..." min="1" id="KitobBetlarSoni" minlength="1"
+              autocomplete="off" required />
           </div>
-          <img src="img/log.svg" class="image" alt="" />
-        </div>
-        <div class="panel right-panel">
-          <div class="content">
-            <h3>One of us ?</h3>
-            <p>
-              Already made an account here? Sign in and get access to all our services.
-            </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Buyurtma qiling
-            </button>
+          <div class="input-field">
+            <i class="fas fa-chevron-down" id="format"></i>
+            <input type="text" placeholder="Format Turini Tanlang..." value="A5" required id="formatType"
+              readonly="readonly" onclick="myformatFunction()" />
           </div>
-          <img src="img/register.svg" class="image" alt="" />
-        </div>
+          <div class="input-field">
+            <i class="fas fa-chevron-down" id="qogoz"></i>
+            <input type="text" placeholder="Qog'oz Turini Tanlang..." value="Oq-qora" required id="qogozType"
+              readonly="readonly" onclick="myqogozFunction()" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-phone-alt"></i>
+            <input type="tel" placeholder="Telefon raqamingizni kiriting..." minlength="4" maxlength="13" required
+              id="phoneNumber" value="+998" autocomplete="off" />
+          </div>
+<!-- 
+          <div class="input-field">
+            <i class="fas fa-chevron-down"></i>
+            <select id="myDropdownFormat">
+              <option value="1">Titular</option>
+              <option value="2">Conyuge</option>
+              <option value="3">Hija</option>
+              <option value="4">Hijo</option>
+              <option value="5">Madre</option>
+            </select>
+          </div> -->
+
+
+
+          
+
+
+          <!-- <nav>
+          
+            <label for="touch"><span>titre</span></label>               
+            <input type="checkbox" id="touch"> 
+          
+            <ul class="slide">
+              <li><a href="#">Lorem Ipsum 1</a></li> 
+              <li><a href="#">Lorem Ipsum 2</a></li>
+              <li><a href="#">Lorem Ipsum 3</a></li>
+              <li><a href="#">Lorem Ipsum 4</a></li>
+            </ul>
+          
+          </nav>  -->
+    
+
+
+          <!-- <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div> -->
+
+
+
+
+          <input type="submit" value="Yuborish" class="btn solid" onclick="yuborish()" />
+          <!-- pattern="+998[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" 
+          data-pattern="+***(**) (***)-**-**"
+          data-prefix="+998"
+          -->
+          <!-- <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div> -->
+
+
+          <!-- <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Default checked radio
+            </label>
+          </div> -->
+
+
+
+          <p class="social-text">Or Sign in with social platforms</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </form>
+        <form action="#" class="sign-up-form">
+          <h2 class="title">Men bilan Bog'laning</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" />
+          </div>
+          <input type="submit" class="btn" value="Sign up" />
+          <p class="social-text">Or Sign up with social platforms</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </form>
       </div>
     </div>
 
-    <script src="app.js"></script>
-  </body>
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>New here ?</h3>
+          <p>
+            Don't have an account yet ? Sign up and get access to all our services.
+          </p>
+          <button class="btn transparent" id="sign-up-btn">
+            Men bilan Bog'laning
+          </button>
+        </div>
+        <img src="img/log.svg" class="image" alt="" />
+      </div>
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>One of us ?</h3>
+          <p>
+            Already made an account here? Sign in and get access to all our services.
+          </p>
+          <button class="btn transparent" id="sign-in-btn">
+            Buyurtma qiling
+          </button>
+        </div>
+        <img src="img/register.svg" class="image" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+
+    //  const sendbtn = document.getElementById("yuborish");
+    //  sendbtn.addEventListener("click", function () {
+    //    
+    //   // name.style.color = "blue";
+    //  });
+    function yuborish() {
+
+      let KitobBetlariSoni = document.getElementById("KitobBetlarSoni").value;
+      let formatType = document.getElementById("formatType").value;
+      let qogozType = document.getElementById("qogozType").value;
+      let phoneNumber = document.getElementById("phoneNumber").value;
+
+
+      if (KitobBetlariSoni != "" && phoneNumber.length == 13) {
+        swal({
+          title: "Buyurtmangiz muvafaqqiyatli yuborildi!",
+          text: `Kitob Betlari soni: ${KitobBetlariSoni}\nFormat Turi: ${formatType}\nQog'oz Turi: ${qogozType}\nTelefon raqamingiz: ${phoneNumber}\nNarx:`,
+          icon: "success",
+        });
+      }
+      else {
+        swal({
+          title: "Iltimos ma'lumotlarni to'ldiring!",
+          icon: "warning",
+          dangerMode: true,
+        });
+      }
+
+
+      // var phoneinput = document.getElementById('phoneNumber');
+
+      // phoneinput.oninvalid = function (event) {
+      //   event.target.setCustomValidity('Username should only contain lowercase letters. e.g. john');
+      // }
+
+
+
+    }
+
+    function myformatFunction() {
+
+      let className = document.getElementById("format").className;
+      if (className == "fas fa-chevron-down") {
+        document.getElementById("format").className = "fas fa-chevron-up";
+      } else {
+        document.getElementById("format").className = "fas fa-chevron-down";
+
+      }
+      // console.log("ishladi")
+      // document.getElementById("myDropdownFormat").click();
+
+      let select = document.getElementById("myDropdownFormat").classList;
+      select.toggle("drop");
+      console.log("okeeey")
+    }
+
+    function myqogozFunction() {
+
+      let className = document.getElementById("qogoz").className;
+      if (className == "fas fa-chevron-down") {
+        document.getElementById("qogoz").className = "fas fa-chevron-up";
+      } else {
+        document.getElementById("qogoz").className = "fas fa-chevron-down";
+
+      }
+      // console.log("ishladi")
+      // document.getElementById("myDropdownFormat").click();
+
+      // document.getElementById("myDropdownFormat").classList.toggle("show");
+    }
+
+    // let a = <select name="languages" id="lang">
+    //     <option value="javascript">JavaScript</option>
+    //     <option value="php">PHP</option>
+    //     <option value="java">Java</option>
+    //     <option value="golang">Golang</option>
+    //     <option value="python">Python</option>
+    //     <option value="c#">C#</option>
+    //     <option value="C++">C++</option>
+    //     <option value="erlang">Erlang</option>
+    //   </select>
+
+
+  </script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
 </html>
